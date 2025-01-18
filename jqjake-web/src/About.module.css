@@ -1,0 +1,59 @@
+.notFound {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.aboutPage {
+    background-color: var(--color-thistle);
+}
+
+.aboutContainer {
+    max-width: 800px;
+    margin: auto;
+    padding: 50px 5px 10px 5px;
+    line-height: 1.6rem;
+}
+
+.boxContainer {
+    border: 2px solid var(--color-black-1);
+    box-shadow: var(--color-black-1) 0px 0px 0px 0px, var(--color-black-1) 0px 0px 0px 0px, var(--color-black-1) 4px 4px 0px 0px;
+    margin-bottom: 30px;
+    background-color: var(--color-white);
+}
+
+.boxTitle {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-black-1);
+    padding: 4px 12px;
+}
+
+.boxContent {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 16px 20px;
+    line-height: 1.8;
+}
+
+.boxContent p {
+    margin-bottom: 0.8rem;
+}
+
+.boxContainer li {
+    list-style-type: none;
+}
+
+.boxContainer li::before {
+    content: "•";
+    padding-right: 10px;
+    color: var(--color-black-1);
+}
+
+.boxContainer a {
+    text-decoration: underline;
+    color: var(--color-black-1);
+}

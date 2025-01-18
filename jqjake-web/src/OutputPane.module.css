@@ -1,0 +1,80 @@
+.outputPaneContainer {
+    border: solid var(--color-grey-2);
+    border-width: 0px 1px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .outputPaneContainer:nth-of-type(2) {
+    border: 2px solid red;
+} */
+
+.titleBar {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 4px;
+    background-color: var(--color-grey-2);
+    flex: 0;
+}
+
+.title {
+    padding-left: 5px;
+    color: black;
+}
+
+.hasErrorForTitle {
+    float: right;
+    color: white;
+    display: block;
+    padding: 0px 5px;
+    background-color: red;
+    margin-right: 10px;
+}
+
+.noErrorForTitle {
+    float: right;
+    display: none;
+}
+
+.hasErrorForOutput {
+    color: black;
+}
+
+.isCorrectForTitle {
+    float: right;
+    color: white;
+    display: block;
+    padding: 0px 5px;
+    background-color: rgb(10, 150, 10);
+    margin-right: 10px;
+}
+
+.notCorrectForTitle {
+    float: right;
+    display: none;
+}
+
+.output {
+    padding: 10px 5px;
+    background-color: var(--color-grey-1);
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: auto;
+    scrollbar-color: var(--color-black-3) white;
+}
+
+.outputContent {
+    white-space: pre;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+@media (max-width: 800px) {
+    .outputPaneContainer {
+        min-height: 150px;
+    }
+}

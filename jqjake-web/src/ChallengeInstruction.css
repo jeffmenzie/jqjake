@@ -1,0 +1,122 @@
+.challengeTitle {
+    text-transform: uppercase;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 15px 10px;
+}
+
+.instructionContainer {
+    line-height: 1.7;
+}
+
+.instructionContainer > .instruction-content {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 450;
+    padding: 0px 10px;
+}
+
+.instruction-content > p {
+    margin-bottom: 0.6rem;
+}
+
+.instruction-content > pre {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 10px;
+    background-color: rgb(232, 236, 239);
+    border-radius: 6px;
+    margin: 15px 15px 15px 15px;
+}
+
+.instruction-content a {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: underline;
+    color: var(--color-black-1);
+}
+
+.instruction-content ul {
+    list-style-position: outside;
+}
+
+.instruction-content li {
+    padding-bottom: 5px;
+}
+
+.instruction-content b {
+    font-weight: 700;
+}
+
+.instruction-content > .instruction-challenge {
+    border-radius: 0px;
+    /* background-color: rgba(216, 191, 216, 0.2); */
+    background-color: rgba(140, 130, 165, 0.15);
+    padding: 5px 10px 5px 10px;
+    border: 1px solid rgba(140, 130, 165, 0.9);
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.instruction-challenge > .instruction-challenge-title {
+    font-weight: 600;
+    padding: 0px 5px 5px 5px;
+}
+
+.instruction-challenge > p {
+    padding: 0px 5px 0.4rem 5px;
+}
+
+/*  converted */
+
+/* combine instruction-inline-output and inline-code*/
+.instruction-inline-code {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: rgb(232, 236, 239);
+    color: rgb(235, 87, 87);
+    border: 1px solid rgb(212, 216, 219);
+    padding: 1px 4px;
+    margin: 0px 2px;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+.instruction-inline-output {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: rgb(232, 236, 239);
+    border: 1px solid rgb(212, 216, 219);
+    color: var(--color-grey-5);
+    padding: 1px 4px;
+    margin: 0px 2px;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+.instruction-caution-container {
+    border-radius: 0px;
+    background-color: rgba(240, 50, 50, 0.1);
+    padding: 5px 10px 5px 10px;
+    border: 1px solid rgba(240, 50, 50, 0.6);
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.instruction-caution-title {
+    font-weight: 600;
+    padding: 0px 5px 5px 0px;
+}
+
+.instruction-notice-container {
+    border-radius: 0px;
+    background-color: rgba(30, 190, 10, 0.15);
+    padding: 5px 10px 5px 10px;
+    border: 1px solid rgba(30, 190, 10, 0.6);
+    margin-bottom: 10px;
+}

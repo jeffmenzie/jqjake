@@ -1,0 +1,19 @@
+{
+  "name": "jqjake-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/backend_api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch ./src/backend_api.js"
+  },
+  "author": "Jeff",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.7"
+  }
+}
