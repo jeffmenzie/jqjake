@@ -32,7 +32,7 @@ function App() {
                 <Route path="/">{(params) => <RootForwarder mostRecentChallenge={mostRecentChallenge} />}</Route>
 
                 <Route path="/challenge/:challengeId">{(params) => <Challenge params={params} challenges={challenges} uid={uid} />}</Route>
-                <Route path="/about" title="ABBBOUT">
+                <Route path="/about">
                     <About routedFrom={"about"} challenges={challenges} />
                 </Route>
                 <Route path="/challenge">Challenge not found</Route>

@@ -48,7 +48,7 @@ const challenges = challengesWithoutCorrectResponses.map((c) => {
 
     const responseCorrect = execFileSync("jq", responseArguments, {
         input: JSON.stringify(c.challengeJson),
-        timeout: 5000,
+        timeout: 4000,
         maxBuffer: 1024 * 1024,
     }).toString();
 
@@ -184,7 +184,7 @@ app.post("/api/validate", (req, res) => {
 
         const responseUserSupplied = execFileSync("jq", execArguments, {
             input: JSON.stringify(challenge.challengeJson),
-            timeout: 5000,
+            timeout: 4000,
             maxBuffer: 1024 * 1024,
         }).toString();
 
@@ -201,11 +201,12 @@ app.post("/api/validate", (req, res) => {
 
         insertTelemetry("validate", pUid, pChallengeId, userIsCorrect, pChallengeFilter);
     } catch (error) {
+        console.log(error.status);
         const returnMessage = {
             userIsCorrect: false,
             userResponse: null,
-            exitStatus: error.status,
-            errorMessage: error.stderr.toString(),
+            exitStatus: error.code === "ETIMEDOUT" ? 5 : error.status,
+            errorMessage: error.code === "ETIMEDOUT" ? "Error. Maximum allowable execution time reached." : error.stderr.toString(),
         };
 
         res.status(200).send(returnMessage);
