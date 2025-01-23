@@ -6,4 +6,7 @@ node_modules/
 *.sqlite
 
 # other
-*.bkp
+*bkp*
+*.db
+.DS_Store
+package-lock.json

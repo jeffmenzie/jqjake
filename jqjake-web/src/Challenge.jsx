@@ -12,7 +12,6 @@ import styles from "./Challenge.module.css";
 
 function Challenge(props) {
     const challenges = props.challenges;
-    const uid = props.uid;
     const totalNumberOfChallenges = props.challenges.length;
 
     /* stateless variables */
@@ -171,7 +170,7 @@ function Challenge(props) {
             },
             body: JSON.stringify({
                 challengeId: currentChallenge,
-                uid: uid,
+                uid: localStorage.getItem("uid") || "na",
                 filter: userFilter,
             }),
         });

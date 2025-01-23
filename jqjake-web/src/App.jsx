@@ -12,9 +12,9 @@ function App() {
     /* run on initial load */
     useEffect(() => {
         const uidFromLocalStorage = localStorage.getItem("uid");
-        if (uidFromLocalStorage) {
-            setUid(uidFromLocalStorage);
-        } else {
+        if (!uidFromLocalStorage) {
+      
+    
             const newUid =
                 "u" +
                 Array(7)
@@ -22,7 +22,7 @@ function App() {
                     .map((x) => Math.random().toString(36).charAt(2))
                     .join("");
             localStorage.setItem("uid", newUid);
-            setUid(newUid);
+         
         }
     }, []);
 
@@ -31,7 +31,7 @@ function App() {
             <Switch>
                 <Route path="/">{(params) => <RootForwarder mostRecentChallenge={mostRecentChallenge} />}</Route>
 
-                <Route path="/challenge/:challengeId">{(params) => <Challenge params={params} challenges={challenges} uid={uid} />}</Route>
+                <Route path="/challenge/:challengeId">{(params) => <Challenge params={params} challenges={challenges}  />}</Route>
                 <Route path="/about">
                     <About routedFrom={"about"} challenges={challenges} />
                 </Route>
