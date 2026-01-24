@@ -13,6 +13,7 @@ challengeAnswerOptions
 
 */
 
+
 const challengesWithoutId = [
     {
         challengeIntroduction: "Introduction to jq",
@@ -296,9 +297,9 @@ const challengesWithoutId = [
         challengeIntroduction: "String interpolation",
         challengeJson: {
             henchPeople: [
-                { person: "Lou the Locksmith", pctShare: .10 },
-                { person: "Sneaky Steve", pctShare: .5 },
-                { person: "Lookout Larry", pctShare: .5 },
+                { person: "Lou the Locksmith", pctShare: 0.1 },
+                { person: "Sneaky Steve", pctShare: 0.5 },
+                { person: "Lookout Larry", pctShare: 0.5 },
             ],
         },
         challengeAnswer: '[.henchPeople[] | "\\(.person) gets a \\(.pctShare * 100) percent share"]',
